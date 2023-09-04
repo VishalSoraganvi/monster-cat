@@ -1,0 +1,100 @@
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  border: 1px transparent;
+}
+
+.cat-icon {
+  width: 3rem;
+  height: 3rem;
+  z-index: 900;
+  position: fixed;
+  top: 2rem;
+  left: 3rem;
+  background-color: #000000;
+  padding: 8px 0px 0px 8px;
+  cursor: pointer;
+}
+
+.side-bar {
+  z-index: 900;
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar-icon {
+  margin-bottom: 3rem;
+  cursor: pointer;
+}
+
+.bar-icon  img {
+  width: 1.5rem;
+}
+
+.social-media{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.social-media img{
+  width: 1.4rem;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+}
+
+
+.song-cover {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(0deg, rgb(0, 0, 0, 1), rgba(0, 0, 0, 0.4)),
+    url("girlFace.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* background blur */
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+
+.box{
+  height: 100vh;
+  width: 75%;
+  z-index: 900;
+  padding-top: 16rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  border: 2px solid red;
+}
+
+.song-container{
+  
+  display: flex;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.release{
+  rotate: 270deg;
+  color: white;
+  width: 20rem;
+}
+
+.song-image > img{
+  height:29rem;
+  width: 29rem;
+}
