@@ -23,18 +23,24 @@ function App() {
       <div className="song-cover"></div>
       <div className="box">
         <div className="song-container">
-          <div className="release">
+          {/* <div className="release">
             <span>Instinct</span> - Released May 22,2020
-          </div>
+          </div> */}
           <div className="song-image">
-            <img src="girlFace.jpg" alt="" />
+            <img src="song-cover.jpg" alt="" />
           </div>
           <div className="song-box">
-            <h2 className="song-title">LEVEL DAYS</h2>
+            <h3 className="song-title">LEVEL DAYS</h3>
             <h2 className="author">CONRO</h2>
             <div className="song-utils">
-              <button className="listen">LISTEN NOW</button>
-              <button className="share">SHARE</button>
+              <button className="listen">
+                <img src="play-icon.svg" alt="" />
+                LISTEN NOW
+              </button>
+              <button className="share">
+                <img src="share-icon.svg" alt="" />
+                SHARE
+              </button>
             </div>
           </div>
         </div>
