@@ -11,68 +11,80 @@ body,
 .container {
   width: 100%;
   height: 100%;
-  border: 1px transparent;
+  border: 0;
+  
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
 
+.navbar{
+  display: flex;
+  height: 7rem;
+  width: 100%;
+  justify-content: space-between ;
+  position: fixed;
+  top: 0;
+  z-index: 900;   
+  /* background-color: transparent; */
+  padding: 2rem 4rem;
+  align-items: center;
+  
+}
+
 .cat-icon {
   width: 3rem;
   height: 3rem;
-  z-index: 900;
-  position: fixed;
-  top: 2rem;
-  left: 3rem;
   background-color: #000000;
   padding: 8px 0px 0px 8px;
   cursor: pointer;
 }
 
-.side-bar {
-  z-index: 900;
-  position: fixed;
-  top: 3rem;
-  right: 3rem;
-  display: flex;
-  flex-direction: column;
-}
 
 .bar-icon {
-  margin-bottom: 3rem;
   cursor: pointer;
 }
 
-.bar-icon  img {
+.bar-icon img {
   width: 1.5rem;
 }
 
-.social-media{
+.side-bar {
+  z-index: 900;
+  position: fixed;
+  top: 7rem;
+  right: 0rem;
+  padding: 2rem 4rem;
   display: flex;
   flex-direction: column;
-
 }
 
-.social-media img{
+
+.side-bar> img{
   width: 1.4rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.3rem;
   cursor: pointer;
 }
 
 
 .song-cover {
+ 
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(0deg, rgb(0, 0, 0, 1), rgba(0, 0, 0, 0.4)),
     url("song-cover.jpg");
+  filter: blur(3px);
+  transform: scale(1.1);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   /* background blur */
-  filter: blur(3px);
-  -webkit-filter: blur(3px);
+  /* filter: blur(3px);
+  -webkit-filter: blur(3px); */
+
+  
 }
 
 .box{
@@ -82,9 +94,8 @@ body,
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 999;
   
-  /* border: 2px solid red; */
 }
 
 .song-container{
@@ -134,14 +145,16 @@ body,
   padding: 1rem;
   margin-right: 0.8rem;
   color: white;
-}
-
-.listen>img {
-  width: 2rem;
-  height: 1.7rem;
-  margin-right: 0.5rem;
+  border: none;
   
 }
+
+.listen:hover{
+  color:black;
+  background-color: white;
+}
+
+
 
 .share {
   background-color: transparent;
@@ -153,11 +166,180 @@ body,
   border: 2px solid white;
 }
 
-.share>img {
-  width: 2rem;
-  height: 1.7rem;
-  margin-right: 0.5rem;
+.share:hover{
+  color: black;
+  background-color: white;
+}
+
+
+
+.dark-bg{
+  width: 100%;
+  background-color: #000000;
+}
+
+.box1 {
+  height: 100vh;
+  width: 75%;
+  z-index: 999;
+  margin: 0 auto;
+  height: fit-content;
+}
+
+.stream_heading{
+  color: white;
+  padding-top:5rem ;
+  margin: 0rem 0 2rem 0;
+  font-size: 3rem;
+}
+
+.icon-table{
+  display: flex;
+  color: white;
+}
+
+.icon-table>div{
+  border: 1px solid white;
+  padding: 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  
+}
+
+.icon-table i{
+  cursor: pointer;
+}
+
+.track-list{
+  font-size: 3rem;
+  color: white;
+  margin: 3rem 0;
+}
+
+table{
+  width: 100%;  
+  color: white;
+  font-size: 1.4rem;
+}
+
+tr,td{
+  padding: 0.6rem;
+}
+
+.singer{
+  font-size: 1.1rem;
+}
+
+.play-button>i, .share-button>i{
+  cursor: pointer;
+}
+
+.music-video{
+  color: white;
+  margin: 4rem 0 3rem 0;
+  font-size: 3rem;
+}
+
+.video-component{
+  width: 100%;
+  height: 40rem;
+  border: none;
+  margin-bottom: 8rem;
 
 }
 
+.seperator{
+  border-bottom: 2px solid white;
+}
+
+.info{
+  display: flex;
+  color: #fdfdfd;
+  padding: 3rem 0;
+  font-size: 1rem;
+  font-weight: 200;
+  justify-content: space-between;
+  
+}
+
+.info1,.info2,.info3{
+  flex: 1;
+}
+.info1 h2, .info2 h2 {
+  margin-top: 0.5rem;
+}
+
+
+.info1 h2,
+.info2 h2,
+.info3 h2:hover{
+  cursor: pointer;
+}
+
+.info3 h2{
+  color: rgb(99, 99, 99);
+  margin-bottom: 2rem;
+}
+
+.info3 p{
+  color: rgb(184, 182, 182);
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+
+input{
+  background-color: transparent;
+  width: 80%;
+  height: 3rem;
+  border: none;
+  font-size: 1.3rem;
+  outline: none;
+  color: white;
+}
+
+.input-sub{
+  background-color: transparent;
+  border: none;
+  width: 20%;
+  height: 2.2rem;
+  font-size: 1.3rem;
+  color: #fdfdfd;
+}
+
+.input-sub:hover {
+  background-color: white;
+  color: black;
+}
+
+
+
+.seperator-inp{
+  border-bottom: 1px solid rgb(99, 99, 99);
+}
+
+
+.footer{
+  margin-top: 3rem;
+  display: flex;
+  color: #fdfdfd;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+
+.footer-icons img{ 
+  margin-right: 1rem;
+}
+
+.footer-p{
+  color: white;
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 1rem;
+}
+
+.footer-p > div {
+  padding-bottom: 2rem;
+}
 
